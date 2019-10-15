@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "safeinput.h"
+#include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
 #include <windows.h>
@@ -158,7 +160,7 @@ void IfLabs9()
 
 }
 
-int IfLabs10()
+void IfLabs10()
 {
 	printf("Hur mycket pengar har du:");
 	int pengar;
