@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+#include "safeinput.h"
+
+
+
+INPUT_RESULT GetInput(char* prompt, char* buff, int maxSize)
+{
+	if (prompt != NULL && strlen(prompt) > 0)
+	{
+		printf("%s", prompt);
+	}
+	if (fgets(buff, maxSize, stdin) == NULL)
+		return INPUT_RESULT_NO_INPUT;
+
+	// If it was too long, there'll be no newline. In that case, we flush
+	// to end of line so that excess doesn't affect the next call.
+	if (buff[strlen(buff) - 1] != '\n') {
+		int extra = 0;
+		char ch;
+		while (((ch = getchar()) != '\n') && (ch != EOF))
+			extra = 1;
+		return (extra == 1) ? INPUT_RESULT_TOO_LONG : INPUT_RESULT_OK;
+	}
+
+	// Otherwise remove newline and give string back to caller.
+	buff[strlen(buff) - 1] = '\0';
+	return INPUT_RESULT_OK;
+}
+
+
+
+int main2()
+{
+	//char* s = "";
+	//scanf("%s", s);
+	//printf(s);
+
+	//char buf[10];
+	//scanf("%s", buf);
+
+	char name[80];
+	INPUT_RESULT res = GetInput("Skriv in namn", name, sizeof(name));
+	if (res != INPUT_RESULT_OK) return;
+
+
+	if (name == "Stefan")
+	{
+		/* Funkar alltså inte - hurrra för C*/
+		printf("Ja");
+	}
+
+	printf("Hejsan %s", name);
+
+}
