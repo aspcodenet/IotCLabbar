@@ -30,6 +30,9 @@
     <ClCompile Include="LabbarPythonIf.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="loopar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="safeinput.h">

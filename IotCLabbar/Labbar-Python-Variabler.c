@@ -10,7 +10,8 @@ void Lab1p()
 
 void Lab2p()
 {
-	char name[] = "Stefan";
+	//char name[] = "Stefan";
+	char *name = "Stefan";
 	printf("Hej %s", name);
 }
 
@@ -25,6 +26,7 @@ void Lab3p()
 void Lab4p()
 {
 	char forname[80];
+	scanf("%s", forname);
 	GetInput("Skriv in ditt förnamn:", forname, 80);
 	char surname[80];
 	GetInput("Skriv in ditt efternamn:", surname, 80);
@@ -73,8 +75,8 @@ void Lab9p()
 	printf("Summan är %d", tal1+tal2);
 	printf("Diff %d", tal1-tal2);
 	printf("Medel är %d", (tal1 + tal2) / 2);
-	printf("Medel är %lf", (float)(tal1 + tal2)/2);
-	printf("Medel är %lf", (tal1 + tal2) / 2.0);
+	printf("Medel är %f", (float)(tal1 + tal2)/2);
+	printf("Medel är %f", (tal1 + tal2) / 2.0f);
 }
 
 
@@ -90,11 +92,11 @@ void Lab10p()
 	printf("Detta är %d timmar och %d minuter", antalTimmar, antalMinuter);
 }
 
-int main234243243()
+int main312231()
 {
+	Lab9p();
 	Lab5p();
 	Lab10p();
-	Lab9p();
 	Lab6p();
 	Lab5p();
 	Lab4p();

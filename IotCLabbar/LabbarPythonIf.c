@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include <windows.h>
-
+#include <string.h>
 
 void Loop3()
 {
@@ -28,7 +28,7 @@ void IfLab3()
 	float f;
 	scanf("%f", &f);
 
-	if (f > 39.5f)
+	if (f >= 37.8f)
 	{
 		printf("Uppsök läkare");
 	}
@@ -52,9 +52,13 @@ void IfLab1()
 	printf("Ange ett tal:");
 	scanf("%d", &tal);
 	if (tal > 10)
+	{
 		printf("Greater than 10");
+	}
 	else if (tal < 10)
+	{
 		printf("Less than 10");
+	}
 }
 
 void IfLab2()
@@ -62,6 +66,8 @@ void IfLab2()
 	int antal;
 	printf("Ange antal liter mjölk som finns:");
 	scanf("%d", &antal);
+
+	antal = 3;
 
 	if (antal < 10)
 		printf("Beställ 30 paket");
@@ -107,7 +113,8 @@ void IfLabs6()
 		printf("Born in 80:s");
 	else if (year >= 1990 && year < 2000)
 		printf("Born in 90:s");
-	else if(year < 1980 || year >= 2000) //Not needed- else is enough
+	//else if(year < 1980 || year >= 2000) //Not needed- else is enough
+	else
 		printf("Not in 80s or 90s");
 
 }
@@ -115,10 +122,12 @@ void IfLabs6()
 void IfLabs7()
 {
 	const char* userName = "stefan";
+	//char userName[] = "stefan";
 	const char* passWord = "secret";
 
 	char user[20];
 	char pwd[20];
+
 	GetInput("Ange username:", user, sizeof(user));
 	GetInput("Ange pwd:", pwd, sizeof(pwd));
 	if (strcmp(user, userName) != 0)
@@ -134,11 +143,12 @@ void IfLabs8()
 {
 	char country[80];
 	GetInput("Ange land:", country, sizeof(country));
+
 	for (int i = 0; i < strlen(country); i++)
 		country[i] = tolower(country[i]);
-	if (strcmp(country, "Sweden") == 0 ||
-		strcmp(country, "Norge") == 0 ||
-		strcmp(country, "Danmark") == 0 )
+	if (strcmp(country, "sweden") == 0 ||
+		strcmp(country, "norge") == 0 ||
+		strcmp(country, "danmark") == 0 )
 		printf("Du bor i Skandinavien");
 
 }
@@ -194,14 +204,17 @@ void IfLabs10()
 
 int main()
 {
+	SetConsoleOutputCP(1252);
+	printf("blä");
+
+	IfLabs8();
+	IfLab3();
 	IfLabs10();
 	IfLabs9();
 	IfLabs8();
 	IfLabs7();
 	IfLabs6();
 	IfLab5();
-	SetConsoleOutputCP(1252);
-	printf("blä");
 	IfLab4();
 	IfLab2();
 	IfLab3();

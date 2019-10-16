@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="Labbar-Python-Variabler.c" />
     <ClCompile Include="labbar1-1.c" />
+    <ClCompile Include="loopar.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="LabbarPythonIf.c" />
     <ClCompile Include="SafeInput.c" />
