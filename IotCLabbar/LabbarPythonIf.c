@@ -15,7 +15,7 @@ void Loop3()
 		scanf("%d", &tal1);
 		scanf("%d", &tal2);
 		printf("Vill du fortsätta");
-		scanf("%c", &cont);
+		scanf(" %c", &cont);
 		if (cont == 'N')
 			break;
 	}
@@ -202,7 +202,7 @@ void IfLabs10()
 
 }
 
-int main()
+int main123231()
 {
 	SetConsoleOutputCP(1252);
 	printf("blä");

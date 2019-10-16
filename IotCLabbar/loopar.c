@@ -4,35 +4,38 @@
 #include <stdbool.h>
 #include <math.h>
 #include <windows.h>
+#include <limits.h>
 
 void LoopLab1()
 {
 	for (int i = 0; i <= 10; i++)
-		printf("%i\n");
+		printf("%d\n",i);
 }
 
 void LoopLab2()
 {
 	int tal1, tal2;
 	printf("Mata in tal1:");
-	scanf("%d",&tal1);
+	GetInputInt("",&tal1);
 	printf("Mata in tal2:");
-	scanf("%d", &tal2);
+	GetInputInt("", &tal2);
 
 	for (int i = tal1; i < tal2; i++)
-		printf("%i\n");
+		printf("%d\n",i);
 }
 
 void LoopLab3()
 {
+	int a = 12;
+
 	while (true)
 	{
 		int tal1, tal2;
 		printf("Mata in tal1:");
-		scanf("%d", &tal1);
+		GetInputInt("", &tal1);
 		printf("Mata in tal2:");
-		scanf("%d", &tal2);
-		
+		GetInputInt("", &tal2);
+
 		printf("%d + %d är %d", tal1, tal2, tal1+tal2);
 
 		char input[2];
@@ -50,7 +53,7 @@ void LoopLab4()
 	{
 		int tal1;
 		printf("Mata in tal1:");
-		scanf("%d",&tal1);
+		GetInputInt("", &tal1);
 		sum += tal1;
 	}
 	printf("Summan blir:%d",sum);
@@ -61,7 +64,7 @@ void LoopLab5()
 {
 	int tal1;
 	printf("Mata in tal1:");
-	scanf("%d", &tal1);
+	GetInputInt("", &tal1);
 
 	for (int i = tal1-1; i >0; i--)
 	{
@@ -75,7 +78,7 @@ void LoopLab6()
 	{
 		int tal1;
 		printf("Mata in tal1:");
-		scanf("%d", &tal1);
+		GetInputInt("", &tal1);
 		if (tal1 > 10)
 			printf("Värdet är för högt");
 		else if (tal1 < 10)
@@ -99,7 +102,7 @@ void LoopLab8()
 	while (1)
 	{
 		printf("Mata in tal1:");
-		scanf("%d", &tal1);
+		GetInputInt("", &tal1);
 		if (tal1 > 30)
 		{
 			printf("Du har matat in ett felaktigt tal");
@@ -139,10 +142,52 @@ void LoopLab9()
 }
 
 
-int main231312231()
+int main()
 {
+	LoopLab1();
+	LoopLab2();
+	LoopLab3();
+	LoopLab4();
+	LoopLab5();
+	LoopLab6();
+	LoopLab7();
+	LoopLab8();
+	LoopLab9();
 	SetConsoleOutputCP(1252);
 	printf("blä");
+
+	//Loopar
+	for (int i = 0; i < 100; i+=10)
+	{
+		printf("år nr %d", i);
+	}
+	int i = 0;
+	while (i < 100)
+	{
+		printf("år nr %d", i);
+		i += 10;
+	}
+	i = 0;
+	do
+	{
+		printf("år nr %d", i);
+		i += 10;
+	} while (i < 100);
+
+
+	while (true)
+	{
+		int age;
+		scanf("%d", &age);
+		if (age < 10)
+			break;
+	}
+	int age;
+	do
+	{
+		scanf("%d", &age);
+
+	} while (age >= 10);
 
 	LoopLab1();
 

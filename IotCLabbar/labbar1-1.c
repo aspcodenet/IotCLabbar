@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include "safeinput.h"
 
 void Lab1()
 {
@@ -37,8 +38,7 @@ float ConvertCelsiusToFahrenheit(float celsius)
 void Lab2()
 {
 	float celsius = 0;
-	printf("Ange grader i Celsius");
-	scanf("%f", &celsius);
+	GetInputFloat("Ange grader i Celsius", &celsius);
 
 	float fahrenheit = ConvertCelsiusToFahrenheit(celsius);
 
