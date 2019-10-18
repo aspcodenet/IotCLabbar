@@ -131,6 +131,7 @@
     <ClCompile Include="SafeInput.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="loopar.h" />
     <ClInclude Include="safeinput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

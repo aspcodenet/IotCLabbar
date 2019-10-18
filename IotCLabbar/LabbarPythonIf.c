@@ -204,6 +204,9 @@ void IfLabs10()
 
 int main123231()
 {
+
+
+
 	SetConsoleOutputCP(1252);
 	printf("blä");
 

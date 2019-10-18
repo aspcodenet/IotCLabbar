@@ -3,9 +3,26 @@
 #include <stdio.h>
 #include "safeinput.h"
 #include <stdbool.h>
+#include "loopar.h"
+
+
+#define ANFALLARE 22
+#define MALIS 23
+
 
 int main243243243()
 {
+	char foppa[] = "Foppa";
+	PLAYER_POSITION p = FORWARD;
+	PrintPlayer(foppa, p);
+
+	PrintPlayer("Mats Sundin", FORWARD);
+
+	SKRIVUT_ERRORCODE errorCode = SkrivUt(12, 38.0f);
+	if (errorCode == SKRIVUT_ERRORCODE_N_TOO_LARGE)
+	{
+	}
+
 	int i;
 	scanf("%d", &i);
 

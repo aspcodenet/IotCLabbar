@@ -5,11 +5,63 @@
 #include <math.h>
 #include <windows.h>
 #include <limits.h>
+#include "loopar.h"
+
+void PrintPlayer(char* namn, PLAYER_POSITION pos)
+{
+	printf("%s är ", namn);
+	switch (pos)
+	{
+		case GOALIE:
+			printf("målis");
+			break;
+		case DEFENCE:
+			printf("back");
+			break;
+		case FORWARD:
+			printf("forward");
+			break;
+	}
+}
+
+SKRIVUT_ERRORCODE SkrivUt(int n, float temp)
+{
+	if (n > 100)
+		return SKRIVUT_ERRORCODE_N_TOO_LARGE;
+	if (temp < 30)
+		return SKRIVUT_ERRORCODE_TEMP_TOO_LOW;
+
+	printf("Talet är %d", n);
+	printf("Temp är %f", temp);
+	return SKRIVUT_ERRORCODE_OK;
+}
+
+
+void mymain()
+{
+	SKRIVUT_ERRORCODE errorCode = SkrivUt(12, 38.0f);
+	if (errorCode == SKRIVUT_ERRORCODE_N_TOO_LARGE)
+	{
+	}
+	
+
+	SkrivUt(42, 38.5f);
+}
+
+
+
 
 void LoopLab1()
 {
 	for (int i = 0; i <= 10; i++)
 		printf("%d\n",i);
+
+	int n = 0;
+	while (n <= 10)
+	{
+		printf("%d\n", n);
+		n++;
+	}
 }
 
 void LoopLab2()
@@ -22,6 +74,10 @@ void LoopLab2()
 
 	for (int i = tal1; i < tal2; i++)
 		printf("%d\n",i);
+
+	for (int year = 1972; year < 2019; year+=10)
+		printf("%d\n",year);
+
 }
 
 void LoopLab3()
@@ -40,6 +96,7 @@ void LoopLab3()
 
 		char input[2];
 		GetInput("Vill du fortsätta J/N", input, sizeof(input));
+
 		if (input[0] == 'N')
 			break;
 		
@@ -91,10 +148,15 @@ void LoopLab6()
 
 void LoopLab7()
 {
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i <= 100; i++)
 		if (i % 2 == 1)
 			printf("%d",i);
+
+	for (int i = 1; i <= 100; i+=2)
+		printf("%d", i);
 }
+
+
 
 void LoopLab8()
 {
@@ -144,6 +206,13 @@ void LoopLab9()
 
 int main()
 {
+
+	int a = 46;
+	if (1 < a < 45)
+	{
+		printf("Hello");
+	}
+
 	LoopLab1();
 	LoopLab2();
 	LoopLab3();
