@@ -37,8 +37,106 @@ SKRIVUT_ERRORCODE SkrivUt(int n, float temp)
 }
 
 
-void mymain()
+
+
+void DubblaFloat(float *b)
 {
+	*b = 12.0f;
+}
+
+
+void Dubbla(int *b)
+{
+	*b = 12;
+}
+
+
+void JobbaMedIntArray(int* b)
+{
+	//*b = 12;
+	b[0] = 12;
+	b[1] = 123;
+}
+
+
+void ChangeChar(char* ch)
+{
+	*ch = 'A';
+}
+
+void PrintChars(char* ch)
+{
+	printf("%s", ch);
+}
+
+void main()
+{
+	//int tal[4];
+	//for (int i = 0; i < 4; i++)
+	//{
+	//	int talet;
+	//	printf("Mata in tal");
+	//	scanf("%d",&talet);
+	//	tal[i] = talet;
+	//}
+
+	int antal;
+	printf("Hur många tal?");
+	scanf("%d", &antal);
+	int* nyatal = malloc(antal*sizeof(int));
+
+	for (int i = 0; i < antal; i++)
+	{
+		int talet;
+		printf("Mata in tal");
+		scanf("%d", &talet);
+		nyatal[i] = talet;
+	}
+
+
+
+
+	antal = antal + 1;
+	nyatal = realloc(nyatal, antal * sizeof(int));
+
+
+
+
+
+	char namn[40] = "Foppa";
+	char* namn2 = "Stefan";
+
+	PrintChars("Stefan");
+	PrintChars(namn2);
+
+	char ch;
+	ch = 'a';
+	ChangeChar(&ch);
+	printf("%c", ch);
+
+
+	int a;
+	a = 13;
+	printf("%d", &a);
+	Dubbla(&a);
+	printf("%d", a);
+
+	int intArray[4] = {1,8,3,99};
+	printf("%d", intArray[0]);
+	JobbaMedIntArray(intArray);
+
+
+
+
+
+
+	float af;
+	af = 13.0f;
+	printf("%d", &a);
+	DubblaFloat(&af);
+	printf("%f", af);
+
+
 	SKRIVUT_ERRORCODE errorCode = SkrivUt(12, 38.0f);
 	if (errorCode == SKRIVUT_ERRORCODE_N_TOO_LARGE)
 	{
@@ -204,7 +302,7 @@ void LoopLab9()
 }
 
 
-int main()
+int main231231231()
 {
 
 	int a = 46;

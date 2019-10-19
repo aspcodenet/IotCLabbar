@@ -147,7 +147,7 @@ void Lab6()
 
 
 int main423234()
-{
+{	
 	Lab1();
 	Lab2();
 	Lab6();
