@@ -69,7 +69,7 @@ void PrintChars(char* ch)
 	printf("%s", ch);
 }
 
-void main()
+void main21231231()
 {
 	//int tal[4];
 	//for (int i = 0; i < 4; i++)

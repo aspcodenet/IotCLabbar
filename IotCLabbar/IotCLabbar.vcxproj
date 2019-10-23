@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arrayLabbar.c" />
     <ClCompile Include="Labbar-Python-Variabler.c" />
     <ClCompile Include="labbar1-1.c" />
     <ClCompile Include="loopar.c" />
