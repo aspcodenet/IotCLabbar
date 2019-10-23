@@ -152,7 +152,7 @@ void arrayLab5b()
 
 
 
-int main()
+int ma32in()
 {
 	arrayLab5b();
 	arrayLab3();
