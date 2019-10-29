@@ -125,16 +125,21 @@
   <ItemGroup>
     <ClCompile Include="arrayLabbar.c" />
     <ClCompile Include="datumlabbar.c" />
+    <ClCompile Include="fileDemo.c" />
     <ClCompile Include="Labbar-Python-Variabler.c" />
     <ClCompile Include="labbar1-1.c" />
     <ClCompile Include="loopar.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="LabbarPythonIf.c" />
     <ClCompile Include="SafeInput.c" />
+    <ClCompile Include="strings.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="loopar.h" />
     <ClInclude Include="safeinput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Databas\birds.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

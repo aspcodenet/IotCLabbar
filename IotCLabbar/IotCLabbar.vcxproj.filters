@@ -39,6 +39,12 @@
     <ClCompile Include="datumlabbar.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="strings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileDemo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="safeinput.h">
@@ -47,5 +53,8 @@
     <ClInclude Include="loopar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Databas\birds.txt" />
   </ItemGroup>
 </Project>

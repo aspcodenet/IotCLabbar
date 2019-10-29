@@ -154,7 +154,7 @@ void datumLabbar9()
 }
 
 
-void main()
+void m123231231ain()
 {
 	datumLabbar9();
 	datumLabbar7();
