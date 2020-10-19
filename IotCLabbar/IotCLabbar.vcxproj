@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="a.c" />
     <ClCompile Include="arrayLabbar.c" />
     <ClCompile Include="datumlabbar.c" />
     <ClCompile Include="fileDemo.c" />

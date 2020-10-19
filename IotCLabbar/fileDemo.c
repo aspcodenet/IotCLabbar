@@ -18,7 +18,7 @@ void ReadFile()
 }
 
 
-int main()
+int mai234234234234()
 {
 	ReadFile();
 	FILE* f = fopen("c:\\kurser\\heja123.txt", "a");

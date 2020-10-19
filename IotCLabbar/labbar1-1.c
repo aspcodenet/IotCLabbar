@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <stdlib.h>
+
 #include "safeinput.h"
 
 void Lab1()
@@ -146,8 +148,12 @@ void Lab6()
 }
 
 
-int main423234()
-{	
+int main123213231()
+{
+	int *a = malloc(sizeof(int)*2);//new int[2]
+	a[0] = 1;
+	a[20] = 1;
+	
 	Lab1();
 	Lab2();
 	Lab6();

@@ -3,6 +3,10 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
+
+
+#include "safeinput.h"
 
 
 void stringLabbar1()
@@ -144,15 +148,6 @@ void stringLabbar4()
 		//lastCharWasSpace = namn[i] == ' ';
 	}
 
-	for (int i = 0; i < strlen(namn); i++)
-	{
-		if ( i == 0 || namn[i] == ' ')
-		{
-			namn[i+1] = toupper(namn[i]);
-		}
-	}
-
-
 
 }
 
@@ -171,8 +166,70 @@ void stringLabbar5()
 
 }
 
-int main2234()
+
+void stringLabbar6()
 {
+	char txt[50] = "ett,två,tre,fyra,fem,sex,sju";
+
+//---------Without array. Actually what we typically USE!! c-string handling is anyway about
+// traversing to \0
+	char* ch = strtok(txt, ",");
+	while(ch != NULL)
+	{
+		printf("%s",ch);
+		ch = strtok(NULL, ",");
+	}
+
+	//---------With array of char *
+	char* parts[7];
+	int index = 0;
+	char txt2[50] = "ett,två,tre,fyra,fem,sex,sju";
+	ch = strtok(txt2, ",");
+	while (ch != NULL)
+	{
+		parts[index] = ch;
+		ch = strtok(NULL, ",");
+	}
+
+	//---------With dynamic array of char *
+	int cnt = 0;
+	char txt3[50] = "ett,två,tre,fyra,fem,sex,sju";
+	for (int i = 0; i < strlen(txt3); i++)
+		if (txt3[i] == ',')
+			cnt++;
+	char** parts2 = malloc(sizeof(char *) * cnt);
+	index = 0;
+	ch = strtok(txt3, ",");
+	while (ch != NULL)
+	{
+		parts2[index] = ch;
+		index++;
+		ch = strtok(NULL, ",");
+	}
+	for(int i = 0; i < cnt;i++)
+		printf("%s", parts2[i]);
+
+
+
+}
+
+void stringLabbar7()
+{
+	char email[50];
+	GetInput("Mata in epost:", email, sizeof(email));
+	int rpointPos =  strlen(email) - (strrchr(email, '.') - email) -1;
+	if(strchr(email,'@') && (rpointPos == 2 || rpointPos == 3 ))
+	{
+		printf("OK");
+	}
+	else
+		printf("Error");
+}
+
+int main()
+{
+	stringLabbar7();
+	stringLabbar6();
 	stringLabbar5();
 	stringLabbar4();
 	char ch[50] = "I am a C# hacker.";
